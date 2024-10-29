@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class armstrong {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        
+        System.out.println("enter three digits:");
+       
+        int digit1,digit2,digit3,n,temp,ans;
+        for (n=100;n<=999;n++) {
+        temp =n;
+         digit3 = temp%10;
+         temp=temp/10;
+         
+         digit2 = temp%10;
+         temp=temp/10;
+         
+         digit1 = temp%10;
+         temp=temp/10;
+         
+        ans =(digit1*digit1*digit1)+(digit2*digit2*digit2)+(digit3*digit3*digit3);
+       if (ans==n) {
+    	   System.out.println(ans+"  " +"armstrong");
+       }
+       
+}
+	}
+}
