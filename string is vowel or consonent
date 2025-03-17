@@ -1,0 +1,19 @@
+public class Main
+{
+	public static void main(String[] args) {
+		char c='g';
+		if(isSmallVowel(c) || isCapitalVowel(c)){
+		    System.out.println(c+"is vowel"); 
+		}
+
+else{
+     System.out.println(c+"is consonent");
+}
+	}
+	 static boolean isSmallVowel( char c){
+	     return(c=='a'||c=='e'||c=='i'||c=='o'||c=='u');
+	 }
+	 static boolean isCapitalVowel( char c){
+	     return(c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
+	 }
+}
