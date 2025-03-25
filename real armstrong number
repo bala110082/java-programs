@@ -1,0 +1,25 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        System.out.println("enter the numer:");
+       int num =sc.nextInt();
+     
+       int len = String.valueOf(num).length(); 
+       int temp,rem,quo,power=0;
+       temp=num;
+       while(temp>0){
+           
+           rem=temp%10;
+          power+= Math.pow(rem,len);
+          temp/=10;
+       }
+       if(num==power){
+           System.out.println("armstrong");
+       }
+       else{
+           System.out.println("not a armstrong");
+       }
+       
+    }
+}
