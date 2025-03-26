@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {12, 1, 54, 13, 7, 29, 54};
+
+        // Check if array has at least 2 elements
+        if (arr.length < 2) {
+            System.out.println("Array must have at least two elements.");
+            return;
+        }
+
+        // Initialize variables
+        int firstLargest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        int firstSmallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        // Traverse the array to find the values
+        for (int num : arr) {
+            // Find largest and second largest
+            if (num > firstLargest) {
+                secondLargest = firstLargest;
+                firstLargest = num;
+            } else if (num > secondLargest && num != firstLargest) {
+                secondLargest = num;
+            }
+
+            // Find smallest and second smallest
+            if (num < firstSmallest) {
+                secondSmallest = firstSmallest;
+                firstSmallest = num;
+            } else if (num < secondSmallest && num != firstSmallest) {
+                secondSmallest = num;
+            }
+        }
+
+        // Check if second largest or second smallest exists
+        if (secondLargest == Integer.MIN_VALUE) {
+            System.out.println("No second largest number found.");
+        } else {
+            System.out.println("First Largest Number: " + firstLargest);
+            System.out.println("Second Largest Number: " + secondLargest);
+        }
+
+        if (secondSmallest == Integer.MAX_VALUE) {
+            System.out.println("No second smallest number found.");
+        } else {
+            System.out.println("First Smallest Number: " + firstSmallest);
+            System.out.println("Second Smallest Number: " + secondSmallest);
+        }
+    }
+}
